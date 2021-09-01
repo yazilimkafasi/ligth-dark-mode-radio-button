@@ -1,0 +1,46 @@
+:root {
+    --light_radio_button_size: 50px;
+    --dark_radio_button_size: 45px;
+}
+
+body {
+    margin: 0;
+    background-color: #eee;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/782173/light_grain.png");
+    transition: background 1s;
+}
+
+#light_dark_radio_button_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(var(--light_radio_button_size)*3);
+    padding-left: 1px;
+}
+
+.light_dark_radio_button {
+    position: relative;
+    border-radius: 100%;
+    top: 2px;
+    box-shadow: 0px 0px 2px 1px black;
+    width: var(--light_radio_button_size);
+    height: var(--light_radio_button_size);
+    display: inline-block
+}
+
+#light_radio_button {
+    width: var(--light_radio_button_size);
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/782173/gold_grain.png");
+}
+
+#dark_radio_button {
+    background-color: #111;
+    top: 0px;
+    left: 0px;
+    width: var(--dark_radio_button_size);
+    height: var(--dark_radio_button_size);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .7s, left .7s;
+}
